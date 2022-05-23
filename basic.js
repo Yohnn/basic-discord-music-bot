@@ -1,6 +1,6 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client({intents: ['GUILDS','GUILD_MESSAGES']})
-const token = 'ODg2OTE4NjY4OTUxMzc5OTg4.YT8lYA.wgFsfuCXTCU7PtSicGDXM_Z-Ry4';
+const config = require('./config.json');
 
 const PREFIX = '!';
 
@@ -40,4 +40,4 @@ bot.on('message', message=> {
 
 })
 
-bot.login(token);
+bot.login(config.token);
